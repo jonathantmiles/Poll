@@ -26,7 +26,7 @@ class VoteResponseTableViewCell: UITableViewCell {
         nameTextLabel.text = vote.name
         responseTextLabel.text = vote.response
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "dd-MMM-yyyy"
         let dateString = formatter.string(from: vote.timestamp)
         timestampTextLabel.text = dateString
     }
