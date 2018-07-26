@@ -10,6 +10,7 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController, VoteControllerProtocol {
 
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -26,10 +27,12 @@ class ResultsTableViewController: UITableViewController, VoteControllerProtocol 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath)
         
-        let vote = voteController?.votes[indexPath.row]
+        let sortedVotes = voteController?.votes.sorted(by: { $0.timestamp < $1.timestamp })
         
-        cell.textLabel?.text = vote?.name
-        cell.detailTextLabel?.text = vote?.response
+        let vote = sortedVotes![indexPath.row]
+        
+        cell.textLabel?.text = vote.name
+        cell.detailTextLabel?.text = vote.response
         
         return cell
     }

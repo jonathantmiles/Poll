@@ -38,7 +38,7 @@ class VotingViewController: UIViewController, VoteControllerProtocol {
         guard let name = nameTextField.text,
             let response = responseTextField.text else { return }
         
-        voteController?.createVote(withName: name, response: response)
+        voteController?.createVote(withName: name, response: response, timestamp: Date())
     }
     
     // MARK: - Properties

@@ -12,12 +12,13 @@ class VoteController {
     
     // MARK: - Create function
     
-    func createVote(withName name: String, response: String) {
-        let vote = Vote(name: name, response: response)
+    func createVote(withName name: String, response: String, timestamp: Date) {
+        let vote = Vote(name: name, response: response, timestamp: timestamp)
         votes.append(vote)
     }
     
     // MARK: - Properties
     
     var votes: [Vote] = []
+    
 }

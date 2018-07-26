@@ -24,7 +24,7 @@ class PollingTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         passVoteControllerToChildViewControllers()
-
+        
     }
 
     override func didReceiveMemoryWarning() {
