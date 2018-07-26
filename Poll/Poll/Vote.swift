@@ -9,7 +9,15 @@
 import Foundation
 
 struct Vote {
+    init (name: String, response: String, timestamp: Date = Date()){
+        self.name = name
+        self.response = response
+        self.timestamp = timestamp
+    }
+    
     let name: String
     let response: String
     let timestamp: Date
+    
+    
 }

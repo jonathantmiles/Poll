@@ -26,13 +26,12 @@ class ResultsTableViewController: UITableViewController, VoteControllerProtocol 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath)
+        guard let responseCell = cell as? VoteResponseTableViewCell else { return cell }
         
         let sortedVotes = voteController?.votes.sorted(by: { $0.timestamp < $1.timestamp })
         
         let vote = sortedVotes![indexPath.row]
-        
-        cell.textLabel?.text = vote.name
-        cell.detailTextLabel?.text = vote.response
+        responseCell.vote = vote
         
         return cell
     }
@@ -87,4 +86,5 @@ class ResultsTableViewController: UITableViewController, VoteControllerProtocol 
     
     var voteController: VoteController?
 
+    
 }

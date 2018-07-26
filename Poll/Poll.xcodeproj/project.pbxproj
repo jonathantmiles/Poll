@@ -21,6 +21,7 @@
 		F868DA79210A63A100F3E195 /* CombinedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868DA78210A63A100F3E195 /* CombinedViewController.swift */; };
 		F868DA7B210A668000F3E195 /* PollingTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868DA7A210A668000F3E195 /* PollingTabBarViewController.swift */; };
 		F868DA7D210A66EA00F3E195 /* VoteControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868DA7C210A66EA00F3E195 /* VoteControllerProtocol.swift */; };
+		F868DA7F210A7FD700F3E195 /* VoteResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F868DA7E210A7FD700F3E195 /* VoteResponseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		F868DA78210A63A100F3E195 /* CombinedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedViewController.swift; sourceTree = "<group>"; };
 		F868DA7A210A668000F3E195 /* PollingTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingTabBarViewController.swift; sourceTree = "<group>"; };
 		F868DA7C210A66EA00F3E195 /* VoteControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteControllerProtocol.swift; sourceTree = "<group>"; };
+		F868DA7E210A7FD700F3E195 /* VoteResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResponseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		F868DA6F210A5EF900F3E195 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F868DA7E210A7FD700F3E195 /* VoteResponseTableViewCell.swift */,
 				F868DA70210A5F2400F3E195 /* VotingViewController.swift */,
 				F868DA76210A60A000F3E195 /* ResultsTableViewController.swift */,
 				F868DA78210A63A100F3E195 /* CombinedViewController.swift */,
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F868DA7F210A7FD700F3E195 /* VoteResponseTableViewCell.swift in Sources */,
 				F868DA77210A60A000F3E195 /* ResultsTableViewController.swift in Sources */,
 				F868DA79210A63A100F3E195 /* CombinedViewController.swift in Sources */,
 				F868DA6B210A5CB400F3E195 /* VoteController.swift in Sources */,
