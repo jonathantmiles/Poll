@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gM5-XS-SM6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Combined-->
+        <scene sceneID="xUP-Vk-9pc">
+            <objects>
+                <viewController id="gM5-XS-SM6" customClass="CombinedViewController" customModule="Poll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NJS-UH-7AG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JP-ei-LJ7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="312"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="312" id="SWv-mU-qYL"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="DfX-nc-lz7" kind="embed" identifier="EmbedVotingView" id="qKG-oi-Qkl"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h56-fH-JQE">
+                                <rect key="frame" x="0.0" y="333" width="375" height="285"/>
+                                <connections>
+                                    <segue destination="5qo-AL-Adj" kind="embed" identifier="EmbedResultsView" id="Pxt-nq-He9"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h56-fH-JQE" firstAttribute="top" secondItem="8JP-ei-LJ7" secondAttribute="bottom" constant="1" id="9ZD-DA-y3i"/>
+                            <constraint firstItem="8JP-ei-LJ7" firstAttribute="top" secondItem="pgW-GD-mx9" secondAttribute="top" id="GI1-Xe-GxI"/>
+                            <constraint firstItem="8JP-ei-LJ7" firstAttribute="trailing" secondItem="pgW-GD-mx9" secondAttribute="trailing" id="OAX-ZP-Irs"/>
+                            <constraint firstItem="h56-fH-JQE" firstAttribute="bottom" secondItem="pgW-GD-mx9" secondAttribute="bottom" id="QXl-RE-Urk"/>
+                            <constraint firstItem="h56-fH-JQE" firstAttribute="trailing" secondItem="pgW-GD-mx9" secondAttribute="trailing" id="XzX-J0-Aa4"/>
+                            <constraint firstItem="8JP-ei-LJ7" firstAttribute="leading" secondItem="pgW-GD-mx9" secondAttribute="leading" id="ifQ-mV-P1d"/>
+                            <constraint firstItem="h56-fH-JQE" firstAttribute="leading" secondItem="pgW-GD-mx9" secondAttribute="leading" id="uJ5-cS-8OQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pgW-GD-mx9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Combined" id="Vo4-u2-nG1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUU-oy-eWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="114.69265367316342"/>
+        </scene>
+        <!--Voting-->
+        <scene sceneID="YMz-0z-8CI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Voting" id="DfX-nc-lz7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c46-bX-Jz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-14"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="C4U-Cg-149">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Results" id="5qo-AL-Adj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0e-vA-PQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="465" y="317"/>
+        </scene>
+    </scenes>
+</document>
